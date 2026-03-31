@@ -1,0 +1,35 @@
+/* navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* pushes left & right */
+  align-items: center; /* vertically center */
+  padding: 10px 40px;
+  background-color: #F2F0E5;
+  color: black;
+}
+
+/* Title (Left side) */
+.title h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Content (Right side) */
+.content ul {
+  list-style: none;
+  display: flex; /* horizontal menu */
+  gap: 25px; /* space between items */
+  margin: 0;
+  padding: 0;
+}
+
+.content ul li {
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.content ul li:hover {
+  color: #00bcd4;
+}

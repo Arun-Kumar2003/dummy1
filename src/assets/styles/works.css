@@ -1,0 +1,64 @@
+/* Works Section Container */
+.works-container {
+  padding: 80px 120px;
+  background-color: F2F0E5;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Tag / Badge */
+.works-tag {
+  display: inline-block;
+  background: #d4f46b;
+  color: #222;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Heading */
+.works-heading {
+  font-size: 56px;
+  font-weight: 800;
+  color: #0f2d1c;
+  margin: 0;
+}
+
+/* Subtext */
+.works-subtext {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #555;
+}
+
+/* Filter Button Container */
+.works-filters {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+/* Buttons */
+.works-btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Active Button */
+.works-btn-active {
+  background: black;
+  color: white;
+  border: none;
+}
+
+/* Hover Effect */
+.works-btn:hover {
+  background: black;
+  color: white;
+}
