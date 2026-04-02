@@ -1,15 +1,93 @@
+/* Home container */
 .home {
-  text-align: center; /* centers h1 */
+  text-align: center;
+  padding: 40px 20px;
+  height: 100vh; /* full screen landing */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* push images to bottom */
 }
 
-/* Center the button */
+/* Button */
 .works {
   display: block;
-  margin: 20px auto; /* centers horizontally */
-  padding: 10px 20px;
+  margin: 20px auto;
+  padding: 12px 25px;
   font-size: 16px;
   cursor: pointer;
   background: #D2F171;
   border: none;
   border-radius: 10px;
+}
+
+/* Image container */
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* IMPORTANT: align bottoms */
+  position: relative;
+  margin-top: 40px;
+}
+
+/* Common image style */
+.images img {
+  height: 495px; /* SAME HEIGHT FOR ALL */
+  width: auto;
+  object-fit: contain;
+  margin-left: -80px;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+  background: none;
+}
+
+/* First image no margin */
+.images img:first-child {
+  margin-left: 0;
+}
+
+/* Center image on top */
+.images img:nth-child(2) {
+  z-index: 2;
+}
+
+/* Hover effect (active image) */
+.images img:hover {
+  transform: scale(1.08);
+  z-index: 10;
+  filter: blur(0);
+}
+
+/* Blur others when hovering */
+.images:hover img {
+  filter: blur(3px);
+}
+
+/* Remove blur from hovered image */
+.images img:hover {
+  filter: blur(0);
+}
+
+/* Smooth effect */
+.images img {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .home {
+    height: auto;
+  }
+
+  .images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .images img {
+    height: auto;
+    width: 80%;
+    margin-left: 0;
+    filter: none !important;
+  }
 }

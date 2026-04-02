@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './Components/Home'
 import Navbar from './Navbar'
 import Works from './Components/Works'
+import Collabrations from './Components/Collabrations'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Route element={<Home/>} path='/'></Route>
     </Routes>
     <Works/>
+    <Collabrations/>
 
     </>
   )
