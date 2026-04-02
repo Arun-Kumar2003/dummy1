@@ -101,7 +101,7 @@ const Works = () => {
 
        <div className="works-card">
         {filteredProject.map((item) => (
-          <div className="card1" key={item.id}>
+          <div className="card1" key={item.id} style={{ zIndex: item.id }}>
             
             <div className="works-image">
               <img src={item.image} alt="image terla mame" />

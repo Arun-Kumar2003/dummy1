@@ -1,101 +1,157 @@
-/* Main container */
-.works-card {
-  display: flex;
-  flex-direction: column; /* stack cards vertically */
-  gap: 40px;
-  padding: 60px 120px;
+/* =========================
+   GLOBAL SECTION
+========================= */
+
+.works-container {
+  padding: 100px 140px;
   background: #F2F0E5;
 }
 
-/* All cards same design */
-.card1,
-.card2,
-.card3,
-.card4,
-.card5,
-.card6,
-.card7 {
+/* Tag */
+.works-tag {
+  display: inline-block;
+  background: #D2F171;
+  color: #0f2d1c;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+/* Heading */
+.works-heading {
+  font-size: 64px;
+  font-weight: 800;
+  color: #0f2d1c;
+  margin: 10px 0;
+  letter-spacing: -1px;
+}
+
+/* Subtext */
+.works-subtext {
+  font-size: 18px;
+  color: #6b6b6b;
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   FILTER BUTTONS
+========================= */
+
+.works-filters {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0 40px;
+}
+
+.works-btn {
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.25s ease;
+}
+
+.works-btn:hover,
+.works-btn-active {
+  background: #000;
+  color: #fff;
+  border: none;
+}
+
+
+/* =========================
+   CARDS CONTAINER
+========================= */
+
+.works-card {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 60px 120px;
+  background: #F2F0E5;
+  overflow: visible;
+}
+
+
+/* =========================
+   CARD DESIGN
+========================= */
+
+.card1 {
   display: flex;
   align-items: center;
   gap: 40px;
 
-  background: #F2F0E5;
   padding: 40px;
   border-radius: 25px;
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: 0.3s ease;
+  background: #fff; /* better contrast */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 
-   position: sticky;
+  position: sticky;
   top: 100px;
 
   margin-bottom: 120px;
+  transition: transform 0.3s ease;
 }
 
-.card1 { z-index: 1; }
-.card2 { z-index: 2; }
-.card3 { z-index: 3; }
-.card4 { z-index: 4; }
-.card5 { z-index: 5; }
-.card6 { z-index: 6; }
-.card7 { z-index: 7; }
-
-/* Hover effect */
-.card1:hover,
-.card2:hover,
-.card3:hover,
-.card4:hover,
-.card5:hover,
-.card6:hover,
-.card7:hover {
-  transform: translateY(-5px);
+/* Hover */
+.card1:hover {
+  transform: translateY(-8px);
 }
 
-/* Image container */
+
+/* =========================
+   IMAGE
+========================= */
+
 .works-image {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
-/* Image */
 .works-image img {
   width: 100%;
   max-width: 400px;
   border-radius: 15px;
 }
 
-/* Text content */
+
+/* =========================
+   TEXT
+========================= */
+
 .works-def {
   flex: 1;
 }
 
-/* Small tag */
-.works-def p:first-child {
-  font-size: 12px;
-  letter-spacing: 2px;
-  color: #b89b5e;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-/* Heading */
 .works-def h1 {
-  font-size: 40px;
+  font-size: 36px;
   color: #0f2d1c;
-  margin: 10px 0;
+  margin-bottom: 15px;
 }
 
-/* Description */
-.works-def p:nth-child(3) {
+.works-def p {
   color: #555;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
-/* Tech stack */
+
+/* =========================
+   TECH TAGS
+========================= */
+
 .project-tech {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -107,27 +163,44 @@
   font-size: 12px;
 }
 
-/* Bottom link */
+
+/* =========================
+   FOOTER TEXT
+========================= */
+
 .works-def p:last-child {
   font-weight: 600;
   cursor: pointer;
   color: #0f2d1c;
 }
 
-/* Responsive (important) */
+
+/* =========================
+   RESPONSIVE
+========================= */
+
 @media (max-width: 768px) {
-  .card1,
-  .card2,
-  .card3,
-  .card4,
-  .card5,
-  .card6,
-  .card7 {
-    flex-direction: column;
-    text-align: center;
+
+  .works-container {
+    padding: 60px 20px;
   }
 
   .works-card {
     padding: 40px 20px;
+  }
+
+  .card1 {
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    top: 0;
+  }
+
+  .works-image img {
+    max-width: 100%;
+  }
+
+  .works-heading {
+    font-size: 42px;
   }
 }
