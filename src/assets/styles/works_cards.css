@@ -3,7 +3,7 @@
 ========================= */
 
 .works-container {
-  padding: 100px 140px;
+  padding: 100px 140px 5px;
   background: #F2F0E5;
 }
 
@@ -91,7 +91,7 @@
   padding: 40px;
   border-radius: 25px;
 
-  background: #fff; /* better contrast */
+  background: #F2F0E5; /* better contrast */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 
   position: sticky;
