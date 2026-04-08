@@ -4,6 +4,8 @@ import Home from './Components/Home'
 import Navbar from './Navbar'
 import Works from './Components/Works'
 import Collabrations from './Components/Collabrations'
+import Work from './Components/Work'
+
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
     </Routes>
     <Works/>
     <Collabrations/>
+    <Work/>
 
     </>
   )

@@ -1,4 +1,5 @@
 import React from "react";
+import '../assets/styles/collabrations.css'
 
 const Collabrations = () => {
 
