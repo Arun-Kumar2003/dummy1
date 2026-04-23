@@ -5,6 +5,7 @@ import Navbar from './Navbar'
 import Works from './Components/Works'
 import Collabrations from './Components/Collabrations'
 import Work from './Components/Work'
+import Footer from './Footer'
 
 
 
@@ -19,6 +20,7 @@ function App() {
     <Works/>
     <Collabrations/>
     <Work/>
+    <Footer/>
 
     </>
   )
